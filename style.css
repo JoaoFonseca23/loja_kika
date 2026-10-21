@@ -1,0 +1,350 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #13136d;
+  color: #292727;
+}
+
+/* ---------- Cabeçalho ---------- */
+header {
+  background: #a818a8;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.esquerda {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+}
+
+.carrinho {
+  background: #e83fb0;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+/* ---------- Botão das três barras ---------- */
+.hamburguer {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px;
+}
+
+.hamburguer span {
+  display: block;
+  width: 32px;
+  height: 4px;
+  background: #e83fb0;
+  border-radius: 2px;
+  transition: background 0.2s;
+}
+
+.hamburguer:hover span {
+  background: white;
+}
+
+/* ---------- Menu lateral (meia página) ---------- */
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: #111;
+  padding: 80px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transform: translateX(-100%);
+  transition: transform 0.35s ease;
+  z-index: 1000;
+}
+
+.menu.aberto {
+  transform: translateX(0);
+}
+
+.fechar {
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 48px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.fechar:hover {
+  color: #e83fb0;
+}
+
+.botao-menu {
+  background: #e83fb0;
+  color: white;
+  text-decoration: none;
+  padding: 16px 20px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.botao-menu:hover {
+  background: #c2288f;
+  transform: translateX(8px);
+}
+
+/* Fundo escurecido atrás do menu */
+.fundo {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s;
+  z-index: 999;
+}
+
+.fundo.ativo {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ---------- Conteúdo ---------- */
+main {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+main section {
+  margin-bottom: 60px;
+  scroll-margin-top: 20px;
+}
+
+main h2 {
+  margin-bottom: 20px;
+}
+
+.produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.produto {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.produto:hover {
+  transform: translateY(-5px);
+}
+
+.imagem {
+  font-size: 80px;
+  margin-bottom: 10px;
+}
+
+.preco {
+  color: #e83fb0;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.comprar {
+  background: #e83fb0;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.comprar:hover {
+  background: #c2288f;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #777;
+}
+
+/* ---------- Telemóvel ---------- */
+@media (max-width: 600px) {
+  .menu {
+    width: 80%;
+  }
+
+  .logo {
+    height: 70px;
+  }
+
+  header {
+    padding: 0 15px;
+  }
+}
+
+
+/*---------Sobre mim-----------*/
+
+.sobre-conteudo {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.foto-sobre {
+  width: 400px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.texto-sobre {
+  flex: 1;
+}
+
+.texto-sobre h2 {
+  margin-bottom: 15px;
+  color: #e83fb0;
+}
+
+.texto-sobre p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Telemóvel: foto em cima, texto por baixo */
+@media (max-width: 700px) {
+  .sobre-conteudo {
+    flex-direction: column;
+  }
+
+  .foto-sobre {
+    width: 100%;
+  }
+}
+
+/*--------------museu-----------------*/
+
+./* ---------- Museu ---------- */
+.titulo-museu {
+  text-align: center;
+  font-size: 56px;
+  color: #e83fb0;
+  margin: 20px 0 50px;
+}
+
+.obra {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.obra.inverso {
+  flex-direction: row-reverse;
+}
+
+.foto-obra {
+  width: 500px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
+.info-obra {
+  flex: 1;
+}
+
+.obra.inverso .info-obra {
+  text-align: right;
+}
+
+.info-obra h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.info-obra p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: white;
+}
+
+/* Obra 1: título rosa e brilho rosa */
+.obra-1 .info-obra h2 {
+  color: #91eb2a;
+}
+
+.obra-1 .foto-obra {
+  box-shadow: 0 4px 25px rgba(216, 7, 181, 0.6);
+}
+
+/* Obra 2: título amarelo e brilho amarelo */
+.obra-2 .info-obra h2 {
+  color: #ffd166;
+}
+
+.obra-2 .foto-obra {
+  box-shadow: 0 4px 25px rgba(255, 209, 102, 0.6);
+}
+
+/* Telemóvel: pôr dentro do @media (max-width: 700px) já existente */
+@media (max-width: 700px) {
+  .obra,
+  .obra.inverso {
+    flex-direction: column;
+  }
+
+  .foto-obra {
+    width: 100%;
+  }
+
+  .obra.inverso .info-obra {
+    text-align: left;
+  }
+
+  .titulo-museu {
+    font-size: 36px;
+  }
+}

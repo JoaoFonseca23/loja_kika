@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kikinha's Drawings</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="topo">
+
+  <header>
+    <div class="esquerda">
+      <button id="abrir-menu" class="hamburguer" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <a href="#topo" class="logo-link">
+        <img src="logo.png" alt="Kikinha's Drawings" class="logo">
+      </a>
+    </div>
+
+    <div class="carrinho">🛒 Carrinho: <span id="contador">0</span></div>
+  </header>
+
+  <!-- Fundo escurecido -->
+  <div id="fundo" class="fundo"></div>
+
+  <!-- Menu lateral -->
+  <nav id="menu" class="menu">
+    <button id="fechar-menu" class="fechar" aria-label="Fechar menu">&times;</button>
+
+    <a href="#topo" class="botao-menu">🏠 Início</a>
+    <a href="#produtos" class="botao-menu">🎨 Produtos</a>
+   <a href="sobre.html" class="botao-menu">✨ Sobre mim</a>
+    <a href="#contactos" class="botao-menu">✉️ Contactos</a>
+    <a href="museu.html" class="botao-menu">Kikinha´s museum</a>
+  </nav>
+
+  <main>
+    <section id="produtos">
+      <h2>Os nossos produtos</h2>
+      <div class="produtos">
+
+        <article class="produto">
+          <div class="imagem">👕</div>
+          <h3>T-shirt</h3>
+          <p class="preco">15,00 €</p>
+          <button class="comprar">Adicionar ao carrinho</button>
+        </article>
+
+        <article class="produto">
+          <div class="imagem">👖</div>
+          <h3>Calças</h3>
+          <p class="preco">30,00 €</p>
+          <button class="comprar">Adicionar ao carrinho</button>
+        </article>
+
+        <article class="produto">
+          <div class="imagem">👟</div>
+          <h3>Sapatilhas</h3>
+          <p class="preco">45,00 €</p>
+          <button class="comprar">Adicionar ao carrinho</button>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="sobre">
+      <h2>Sobre mim</h2>
+      <p>Olá eu sou a kika e tenho um amigo polaco bue estranho</p>
+    </section>
+
+    <section id="contactos">
+      <h2>Contactos</h2>
+      <p>Escreva aqui o seu email ou redes sociais.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Kikinha's Drawings. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
